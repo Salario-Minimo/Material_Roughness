@@ -3,4 +3,4 @@ import pandas as pd
 
 Data = pd.read_excel("Material_data.xlsx")
 
-st.write("Data")
+st.write(Data)
