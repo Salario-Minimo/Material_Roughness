@@ -9,7 +9,7 @@ Condicion = Data["Condicion"].unique()
 sb_material = st.selectbox("Material:", Material)
 sb_condicion = st.selectbox("Condicion:", Condicion)
 
-df_front = Data[Data[sb_material]]
+df_front = Data[Data["Material"]=sb_material]
 st.write(df_front)
 
 st.write(Material, Condicion)
