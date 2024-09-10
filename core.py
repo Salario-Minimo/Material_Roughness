@@ -4,12 +4,13 @@ import pandas as pd
 Conversion = {"Milímetros":1, "Metros":1000, "Pies":304.8, "Pulgadas":25.4}
 Data = pd.read_excel("Material_data.xlsx")
 
+sb_conversion = st.selectbox("Unidades:", Conversion)
 # Aquí ocurre la conversión
-Data["Minimo"] = Data["Minimo"]/666
+Data["Minimo"] = Data["Minimo"]/sb_conversion
 
 Material = Data["Material"].unique()
 
-sb_conversion = st.selectbox("Unidades:", Conversion)
+
 sb_material = st.selectbox("Material:", Material)
 
 df_front = Data[Data["Material"]==sb_material]
