@@ -1,8 +1,11 @@
 import streamlit as st
 import pandas as pd
 
-Conversion = ("Milímetros", "Metros", "Pies", "Pulgadas")
+Conversion = {"Milímetros":1, "Metros":1000, "Pies":304.8, "Pulgadas":25.4}
 Data = pd.read_excel("Material_data.xlsx")
+
+# Aquí ocurre la conversión
+st.write(Data["Minimo"]/666)
 
 Material = Data["Material"].unique()
 
@@ -15,6 +18,8 @@ Condicion = df_front["Condicion"].unique()
 sb_condicion = st.selectbox("Condicion:", Condicion)
 
 df_front = df_front[df_front["Condicion"]==sb_condicion]
+
+
 
 
 
