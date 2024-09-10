@@ -12,6 +12,3 @@ sb_condicion = st.selectbox("Condicion:", Condicion)
 df_front = Data[Data["Material"]==sb_material]
 st.write(df_front)
 
-st.write(Material, Condicion)
-
-st.write(Data)
