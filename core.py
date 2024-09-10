@@ -7,7 +7,7 @@ Data = pd.read_excel("Material_data.xlsx")
 Material = Data["Material"].unique()
 
 sb_material = st.selectbox("Material:", Material)
-sb_conversion = st.selectbox("Unidades:" Conversion)
+sb_conversion = st.selectbox("Unidades:", Conversion)
 
 
 df_front = Data[Data["Material"]==sb_material]
