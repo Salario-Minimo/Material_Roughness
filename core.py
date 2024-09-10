@@ -5,7 +5,7 @@ Conversion = {"Milímetros":1, "Metros":1000, "Pies":304.8, "Pulgadas":25.4}
 Data = pd.read_excel("Material_data.xlsx")
 
 # Aquí ocurre la conversión
-Data["Minimo"] = Data["Minimo"]/666)
+Data["Minimo"] = Data["Minimo"]/666
 
 Material = Data["Material"].unique()
 
