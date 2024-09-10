@@ -6,7 +6,7 @@ Data = pd.read_excel("Material_data.xlsx")
 
 sb_conversion = st.selectbox("Unidades:", Conversion)
 # Aquí ocurre la conversión
-Data["Minimo"] = Data["Minimo"]/sb_conversion
+Data["Minimo"] = Data["Minimo"]/Conversion[sb_conversion]
 
 Material = Data["Material"].unique()
 
