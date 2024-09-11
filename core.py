@@ -1,11 +1,13 @@
 import streamlit as st
 import pandas as pd
+from math import log10
 
 def scientific_notation(row):
   it = ("Minimo", "Maximo", "Recomendado")
   for x in it:
     row[x] = row[x]/Conversion[sb_conversion]
-    row[x] = "{:.2e}".format(row[x])
+    if abs(log10(row[x])) < 3:
+      row[x] = "{:.2e}".format(row[x])
     row[x] = str(row[x]) + " " + Sufijos[sb_conversion]
   return row
 
