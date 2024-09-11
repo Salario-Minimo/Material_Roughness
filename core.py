@@ -6,7 +6,7 @@ def scientific_notation(row):
   it = ("Minimo", "Maximo", "Recomendado")
   for x in it:
     row[x] = row[x]/Conversion[sb_conversion]
-    if not abs(log10(abs(row[x]))) < 2:
+    if not abs(log10(row[x])) < 2:
       row[x] = "{:.3e}".format(row[x])
     row[x] = round(row[x], 5)
     row[x] = str(row[x]) + " " + Sufijos[sb_conversion]
