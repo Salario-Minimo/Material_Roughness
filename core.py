@@ -6,7 +6,7 @@ def scientific_notation(row):
   it = ("Minimo", "Maximo", "Recomendado")
   for x in it:
     row[x] = row[x]/Conversion[sb_conversion]
-    st.write(log10(abs(row[x])))
+    st.write(abs(log10(row[x])))
     row[x] = str(row[x]) + " " + Sufijos[sb_conversion]
   return row
 
