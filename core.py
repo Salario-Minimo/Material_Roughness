@@ -25,12 +25,14 @@ Material = Data["Material"].unique()
 
 sb_material = st.selectbox("Material:", Material, index=None)
 
-df_front = Data[Data["Material"]==sb_material]
+if sb_material is not None:
+  df_front = Data[Data["Material"]==sb_material]
 
 Condicion = df_front["Condicion"].unique()
 sb_condicion = st.selectbox("Condicion:", Condicion, index=None)
 
-df_front = df_front[df_front["Condicion"]==sb_condicion]
+if sb_condicion is not None:
+  df_front = df_front[df_front["Condicion"]==sb_condicion]
 
 
 
