@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 
 def scientific_notation(row):
-  tup = row[2:5]
-  st.write(tup)
+  df = row[2:5]
+  df = df/1000
   return "{:.2e}".format(row["Minimo"])
 
 Conversion = {"Milímetros":1, "Metros":1000, "Pies":304.8, "Pulgadas":25.4}
