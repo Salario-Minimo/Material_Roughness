@@ -20,7 +20,8 @@ Sufijos = {"Milímetros":"mm", "Metros":"m", "Pies":"ft", "Pulgadas":"inch"}
 Data = pd.read_excel("Material_data.xlsx")
 
 sb_conversion = st.selectbox("Unidades:", Conversion)
-df_front = Data.apply(scientific_notation, axis=1)
+Data = Data.apply(scientific_notation, axis=1)
+df_front = Data
 
 Material = df_front["Material"].unique()
 
