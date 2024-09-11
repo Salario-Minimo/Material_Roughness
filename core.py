@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-def scientific_notation(value):
-  return "{:.2e}".format(num)
+def scientific_notation(row):
+  return "{:.2e}".format(row["Minimo"])
 
 Conversion = {"Milímetros":1, "Metros":1000, "Pies":304.8, "Pulgadas":25.4}
 Data = pd.read_excel("Material_data.xlsx")
