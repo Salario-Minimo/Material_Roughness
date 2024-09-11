@@ -4,6 +4,7 @@ import pandas as pd
 def scientific_notation(row):
   df = row[2:5]
   df = df/1000
+  st.write(df)
   return "{:.2e}".format(row["Minimo"])
 
 Conversion = {"Milímetros":1, "Metros":1000, "Pies":304.8, "Pulgadas":25.4}
