@@ -13,6 +13,9 @@ def scientific_notation(row):
     row[x] = str(row[x]) + " " + Sufijos[sb_conversion]
   return row
 
+st.sidebar.header("Introducción")
+st.sidebar.write("La rugosidad es una medida de las irregularidades al interior de una tubería, esta depende del material del que está hecha, su método de fabricación y el estado de esta.")
+st.sidebar.write("Este software proporciona la rugosidad mínima y máxima normal del material, y un valor recomendado, el cual es una media que se recomienda utilizar a la hora de hacer cálculos.")
 st.sidebar.header("Instrucciones")
 st.sidebar.write("Selecciona las unidades en las que necesitas la rugosidad, después selecciona el material de interés y el estado o condición de este.")
 
