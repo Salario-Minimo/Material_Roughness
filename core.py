@@ -50,3 +50,4 @@ if sb_condicion is not None:
 st.write(df_front)
 
 st.text("Fuente: Darby, R. (2008). 6 Pipe Flow. Albright's Chemical Engineering Handbook")
+st.text("Hecho por: Christian Granados")
