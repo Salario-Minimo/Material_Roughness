@@ -6,7 +6,7 @@ def scientific_notation(row):
   for x in it:
     row[x] = row[x]/Conversion[sb_conversion]
     row[x] = "{:.2e}".format(row[x])
-    row[x] = str(row[x]) + Sufijos[sb_conversion]
+    row[x] = str(row[x]) + " " + Sufijos[sb_conversion]
   st.write(row)
   return row
 
