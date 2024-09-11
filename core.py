@@ -14,6 +14,7 @@ def scientific_notation(row):
   return row
 
 st.sidebar.header("Instrucciones")
+st.write("Selecciona las unidades en las que necesitas la rugosidad, después selecciona el material de interés y el estado o condición de este.")
 
 st.header("Rugosidad de una tubería.")
 
