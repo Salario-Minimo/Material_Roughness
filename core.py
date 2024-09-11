@@ -18,7 +18,7 @@ Sufijos = {"Milímetros":"mm", "Metros":"m", "Pies":"ft", "Pulgadas":"inch"}
 Data = pd.read_excel("Material_data.xlsx")
 
 sb_conversion = st.selectbox("Unidades:", Conversion)
-Data = Data.apply(scientific_notation, axis=1)
+df_front = Data.apply(scientific_notation, axis=1)
 
 Material = Data["Material"].unique()
 
@@ -27,8 +27,6 @@ sb_material = st.selectbox("Material:", Material, index=None)
 
 if sb_material is not None:
   df_front = Data[Data["Material"]==sb_material]
-else:
-  df_front = Data
 
 Condicion = df_front["Condicion"].unique()
 sb_condicion = st.selectbox("Condicion:", Condicion, index=None)
