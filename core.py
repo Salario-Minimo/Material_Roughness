@@ -20,7 +20,7 @@ Data = pd.read_excel("Material_data.xlsx")
 sb_conversion = st.selectbox("Unidades:", Conversion)
 df_front = Data.apply(scientific_notation, axis=1)
 
-Material = Data["Material"].unique()
+Material = df_front["Material"].unique()
 
 
 sb_material = st.selectbox("Material:", Material, index=None)
