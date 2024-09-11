@@ -13,6 +13,8 @@ def scientific_notation(row):
     row[x] = str(row[x]) + " " + Sufijos[sb_conversion]
   return row
 
+st.sidebar.header("Instrucciones")
+
 st.header("Rugosidad de una tubería.")
 
 Conversion = {"Milímetros":1, "Metros":1000, "Pies":304.8, "Pulgadas":25.4}
