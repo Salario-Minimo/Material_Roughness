@@ -7,7 +7,7 @@ def scientific_notation(row):
   for x in it:
     row[x] = row[x]/Conversion[sb_conversion]
     if not abs(log10(row[x])) < 2:
-      row[x] = "{:.2e}".format(row[x])
+      row[x] = "{:.3e}".format(row[x])
     row[x] = str(row[x]) + " " + Sufijos[sb_conversion]
   return row
 
