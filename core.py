@@ -11,6 +11,7 @@ def scientific_notation(row):
   return row
 
 Conversion = {"Milímetros":1, "Metros":1000, "Pies":304.8, "Pulgadas":25.4}
+Sufijos = {"Milímetros":"mm", "Metros":"m", "Pies":"ft", "Pulgadas":"inch"}
 Data = pd.read_excel("Material_data.xlsx")
 
 sb_conversion = st.selectbox("Unidades:", Conversion)
