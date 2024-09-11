@@ -2,10 +2,12 @@ import streamlit as st
 import pandas as pd
 
 def scientific_notation(row):
-  df = row[2:5]
-  df = df/1000
-  st.write(df)
-  return "{:.2e}".format(row["Minimo"])
+  it = ("Minimo", "Maximo", "Recomendado")
+  for x in it:
+    row[x] = row[x]/Conversion[sb_conversion]
+    row[x] = "{:.2e}".format(row[x])
+  st.write(row)
+  return row
 
 Conversion = {"Milímetros":1, "Metros":1000, "Pies":304.8, "Pulgadas":25.4}
 Data = pd.read_excel("Material_data.xlsx")
