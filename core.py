@@ -23,12 +23,12 @@ Data = Data.apply(scientific_notation, axis=1)
 Material = Data["Material"].unique()
 
 
-sb_material = st.selectbox("Material:", Material)
+sb_material = st.selectbox("Material:", Material, index=None)
 
 df_front = Data[Data["Material"]==sb_material]
 
 Condicion = df_front["Condicion"].unique()
-sb_condicion = st.selectbox("Condicion:", Condicion)
+sb_condicion = st.selectbox("Condicion:", Condicion, index=None)
 
 df_front = df_front[df_front["Condicion"]==sb_condicion]
 
