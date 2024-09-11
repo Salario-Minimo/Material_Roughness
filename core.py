@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 def scientific_notation(row):
-  tup = row[2:4]
+  tup = row[2:5]
   st.write(tup)
   return "{:.2e}".format(row["Minimo"])
 
